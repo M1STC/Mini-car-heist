@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDGun UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: left;
+            position: absolute;
+            top: 10%;
+            right: 2%;
+            background: rgba(0, 0, 0, 0.75);
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+        p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body id="idgun-ui">
+    <h3>🔍 IDGun Active</h3>
+    <p><strong>Entity ID:</strong> <span id="entity-id"></span></p>
+    <p><strong>Model Hash:</strong> <span id="model-hash"></span></p>
+    <p><strong>Coordinates:</strong> <span id="coords"></span></p>
+    <p><strong>Heading:</strong> <span id="heading"></span></p>
+</body>
+<script>
+    window.addEventListener('message', function(event) {
+        const data = event.data;
+        const ui = document.getElementById('idgun-ui');
+
+        if (data.action === "show") {
+            document.getElementById("entity-id").innerText = data.entityID;
+            document.getElementById("model-hash").innerText = data.modelHash;
+            document.getElementById("coords").innerText = data.coords;
+            document.getElementById("heading").innerText = data.heading;
+            ui.style.display = "block";
+        } else if (data.action === "hide") {
+            ui.style.display = "none";
+        }
+    });
+</script>
+</html>
+ -->
